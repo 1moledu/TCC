@@ -1,0 +1,479 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/peteco-utfpr/grupos-pet/"
+     xml:base="https://github.com/peteco-utfpr/grupos-pet/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/peteco-utfpr/grupos-pet/">
+        <owl:versionIRI rdf:resource="https://github.com/peteco-utfpr/grupos-pet/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#backwardCompatibleWith -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#backwardCompatibleWith">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/hasCampus -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/hasCampus">
+        <owl:inverseOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/isCampusOf"/>
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/University"/>
+        <rdfs:range rdf:resource="https://github.com/peteco-utfpr/grupos-pet/Campus"/>
+        <rdfs:comment xml:lang="en">A university has some campus</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Uma universidade tem vários campus.</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">tem_campus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/hasDomain -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/hasDomain">
+        <owl:inverseOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/isDomainOf"/>
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETactivity"/>
+        <rdfs:range rdf:resource="https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"/>
+        <rdfs:comment xml:lang="en">A PET activity covers a specific domain of knowledge.</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Uma atividade PET abrange uma área de conhecimento específica.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/hasPETgroup -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/hasPETgroup">
+        <owl:inverseOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/isPETgroupOf"/>
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/University"/>
+        <rdfs:range rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETgroup"/>
+        <rdfs:comment xml:lang="en">A university has a pet group</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Uma universidade tem um grupo PET.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/hasParticipatingGroup -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/hasParticipatingGroup">
+        <owl:inverseOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/isParticipantOf"/>
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETactivity"/>
+        <rdfs:range rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETgroup"/>
+        <rdfs:comment xml:lang="en">An activity can be associated with one or more PET groups.</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Uma atividade pode estar vinculada a um ou mais grupos PET</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/isCampusOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/isCampusOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/Campus"/>
+        <rdfs:range rdf:resource="https://github.com/peteco-utfpr/grupos-pet/University"/>
+        <rdfs:comment xml:lang="en">A campus belongs to an University</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Um campus pertence a uma universidade.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/isDomainOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/isDomainOf">
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"/>
+        <rdfs:range rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETactivity"/>
+        <rdfs:comment xml:lang="en">A domain of knowledge is covered by a PET activity.</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Uma área de conhecimento é abordada por uma atividade PET.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/isLocatedIn">
+        <rdfs:range rdf:resource="https://github.com/peteco-utfpr/grupos-pet/GeographicLocation"/>
+        <rdfs:comment xml:lang="en">This is a general relation between a campus and the city it is located or between a city and its state. It can be used to every relation that aims to represent the fact that something is located at some place.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/isPETgroupOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/isPETgroupOf">
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETgroup"/>
+        <rdfs:range rdf:resource="https://github.com/peteco-utfpr/grupos-pet/University"/>
+        <rdfs:comment xml:lang="en">A PET group belongs to or is part of an university.</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Um grupo PET pertence a uma universidade.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/isParticipantOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/isParticipantOf">
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETgroup"/>
+        <rdfs:range rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETactivity"/>
+        <rdfs:comment xml:lang="en">A PET Group can be associated with one or more activities.</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Um grupo PET pode estar associado a uma ou mais atividades.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/hasDescription">
+        <rdfs:comment xml:lang="en">Use with everything that has a description, like a PET group that may be described by the most known activivities or some other features. This is a general relation.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/hasEndDate">
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETactivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/hasStartDate -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/hasStartDate">
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETactivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/peteco-utfpr/grupos-pet/hasTitle">
+        <rdfs:domain rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETactivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A PET activity has a title.</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Uma atividade PET possui um título.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/Astronomy -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/Astronomy">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"/>
+        <rdfs:label>Astronomia</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Astronomia</rdfs:label>
+        <rdfs:label xml:lang="fr">Astronomie</rdfs:label>
+        <rdfs:label xml:lang="en">Astronomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/Campus -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/Campus">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/GeographicLocation"/>
+        <rdfs:comment xml:lang="en">A university campus is considered a location, typically identified by a name that often matches the name of the city in which it is situated. It is not a general rule, for instance, the UFPR has several campus at Curitiba: Histórico, Juvevê, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Campus</rdfs:label>
+        <rdfs:label xml:lang="fr">Campus</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Campus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/City -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/City">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/GeographicLocation"/>
+        <rdfs:label xml:lang="pt-br">Cidade</rdfs:label>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+        <rdfs:label xml:lang="fr">Ville</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/CommunityActivity -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/CommunityActivity">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETactivity"/>
+        <rdfs:label xml:lang="fr">Activité communautaire</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Atividade de extensão</rdfs:label>
+        <rdfs:label xml:lang="en">Community activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/ComputerScience -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/ComputerScience">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"/>
+        <rdfs:label xml:lang="pt-br">Ciência da Computação</rdfs:label>
+        <rdfs:label xml:lang="en">Computer science</rdfs:label>
+        <rdfs:label xml:lang="fr">Informatique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/Course_group -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/Course_group">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETgroup"/>
+        <rdfs:label xml:lang="en">Course group</rdfs:label>
+        <rdfs:label xml:lang="fr">Groupe de cursus</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Grupo de curso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge">
+        <rdfs:comment xml:lang="en">It is used to classify a PET activity under specific fields of knowledge. For example, a short course can cover topics in computer science and psychology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Domain of knowledge</rdfs:label>
+        <rdfs:label xml:lang="fr">Domaine de connaissance</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Área de conhecimento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/GeographicLocation -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/GeographicLocation">
+        <rdfs:comment xml:lang="en">It is used to define the state (e.g. Paraná) and city (e.g. Curitiba) of a PET group.</rdfs:comment>
+        <rdfs:label xml:lang="en">Geographic location</rdfs:label>
+        <rdfs:label xml:lang="fr">Localité geographique</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Localização geográfica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/History -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/History">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"/>
+        <rdfs:label xml:lang="en">History</rdfs:label>
+        <rdfs:label xml:lang="pt-br">História</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/Multidisciplinary_group -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/Multidisciplinary_group">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETgroup"/>
+        <rdfs:label xml:lang="fr">Groupe multidisciplinaire</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Grupo conexão de saberes</rdfs:label>
+        <rdfs:label xml:lang="en">Multidisciplinary group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/PETGroupInCampusCuritibaUTFRP -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/PETGroupInCampusCuritibaUTFRP">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/peteco-utfpr/grupos-pet/PETgroup"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/peteco-utfpr/grupos-pet/isLocatedIn"/>
+                        <owl:hasValue rdf:resource="https://github.com/peteco-utfpr/grupos-pet/campusCuritiba"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/PETactivity -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/PETactivity">
+        <rdfs:label xml:lang="fr">Activité PET</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Atividade PET</rdfs:label>
+        <rdfs:label xml:lang="en">PET activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/PETgroup -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/PETgroup">
+        <rdfs:label xml:lang="fr">Groupe PET</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Grupo PET</rdfs:label>
+        <rdfs:label xml:lang="en">PET group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/ResearchActivity -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/ResearchActivity">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETactivity"/>
+        <rdfs:label xml:lang="fr">Activité de recherche</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Atividade de pesquisa</rdfs:label>
+        <rdfs:label xml:lang="en">Research activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/Sociology -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/Sociology">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"/>
+        <rdfs:label xml:lang="pt-br">Sociologia</rdfs:label>
+        <rdfs:label xml:lang="en">Sociology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/State -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/State">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/GeographicLocation"/>
+        <rdfs:label xml:lang="pt-br">Estado</rdfs:label>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+        <rdfs:label xml:lang="fr">État</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/TeachingActivity -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/TeachingActivity">
+        <rdfs:subClassOf rdf:resource="https://github.com/peteco-utfpr/grupos-pet/PETactivity"/>
+        <rdfs:label xml:lang="fr">Activité d&apos;enseignement</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Atividade de ensino</rdfs:label>
+        <rdfs:label xml:lang="en">Teaching activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/University -->
+
+    <owl:Class rdf:about="https://github.com/peteco-utfpr/grupos-pet/University">
+        <rdfs:comment xml:lang="en">The university where the PET group is located at.</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Universidade do grupo PET</rdfs:comment>
+        <rdfs:label xml:lang="pt-br">Universidade</rdfs:label>
+        <rdfs:label xml:lang="en">University</rdfs:label>
+        <rdfs:label xml:lang="fr">Université</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/PETECO -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/peteco-utfpr/grupos-pet/PETECO">
+        <rdf:type rdf:resource="https://github.com/peteco-utfpr/grupos-pet/Course_group"/>
+        <isLocatedIn rdf:resource="https://github.com/peteco-utfpr/grupos-pet/campusCuritiba"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/UTFPR -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/peteco-utfpr/grupos-pet/UTFPR">
+        <rdf:type rdf:resource="https://github.com/peteco-utfpr/grupos-pet/University"/>
+        <hasCampus rdf:resource="https://github.com/peteco-utfpr/grupos-pet/campusCuritiba"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/peteco-utfpr/grupos-pet/campusCuritiba -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/peteco-utfpr/grupos-pet/campusCuritiba">
+        <rdf:type rdf:resource="https://github.com/peteco-utfpr/grupos-pet/Campus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:comment xml:lang="en">Please provide the explanatory comments about the properties always in a one-to-one manner to make interpretation easier.
+
+Of course, if the property has no cardinality restrictions, we can instantiate it multiple times. For example, hasCampus refers to “a university has a campus.” Logically, it can be instantiated zero to many times:
+
+UTFPR hasCampus Curitiba
+UTFPR hasCampus Cornélio Procópio
+UTFPR hasCampus Dois Vizinhos</rdfs:comment>
+        <rdfs:comment xml:lang="pt-br">Por favor, forneça os comentários explicativos sobre as propriedades sempre de maneira um-para-um para facilitar a interpretação.
+
+Logicamente, se a propriedade não tiver restrições de cardinalidade, podemos instanciá-la várias vezes. Por exemplo, hasCampus refere-se a “uma universidade tem um campus”.  Esta propriedade pode ser instanciada de zero a muitas vezes:
+
+UTFPR hasCampus Curitiba
+UTFPR hasCampus Cornélio Procópio
+UTFPR hasCampus Dois Vizinhos
+...</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,28 @@
+@base <https://github.com/peteco-utfpr/grupos-pet/> .
+@prefix pet: <https://github.com/peteco-utfpr/grupos-pet/> .
+
+pet:PETECO a pet:PETgroup, pet:Multidisciplinary_group;
+  pet:hasName "PETECO";
+  pet:isPETgroupOf pet:UTFPR;
+  pet:isParticipantOf pet:Curso_LaTeX .
+
+pet:UTFPR a pet:University;
+  pet:hasName "UTFPR";
+  pet:hasPETgroup pet:PETECO .
+
+pet:Curitiba a pet:GeographicLocation, pet:City;
+  pet:hasName "Curitiba" .
+
+pet:Paraná a pet:GeographicLocation, pet:State;
+  pet:hasName "Paraná" .
+
+pet:Curso_LaTeX a pet:PETactivity, pet:TeachingActivity;
+  pet:hasTitle "Curso LaTeX";
+  pet:hasStartDate "04-04-2026";
+  pet:hasEndDate "14-04-2026";
+  pet:hasParticipatingGroup pet:PETECO;
+  pet:hasDomain pet:ComputerScience;
+  pet:hasURI "https://utfpr.curitiba.br/peteco/2011/03/28/curso-latex/" .
+
+pet:ComputerScience a pet:DomainOfKnowledge, pet:ComputerScience;
+  pet:isDomainOf pet:Curso_LaTeX .

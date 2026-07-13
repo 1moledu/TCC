@@ -1,0 +1,723 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://github.com/peteco-utfpr/grupos-pet/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://github.com/peteco-utfpr/grupos-pet/"
+     versionIRI="https://github.com/peteco-utfpr/grupos-pet/1.0.0">
+    <Prefix name="" IRI="https://github.com/peteco-utfpr/grupos-pet/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="Astronomy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Campus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CommunityActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ComputerScience"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Course_group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DomainOfknowledge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="GeographicLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="History"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Multidisciplinary_group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PETGroupInCampusCuritibaUTFRP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PETactivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PETgroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ResearchActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Sociology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="State"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TeachingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="University"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCampus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasDomain"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPETgroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasParticipatingGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isCampusOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isDomainOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isLocatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isPETgroupOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isParticipantOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasEndDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasStartDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasURI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PETECO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="UTFPR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="campusCuritiba"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Astronomy"/>
+        <Class IRI="DomainOfknowledge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Campus"/>
+        <Class IRI="GeographicLocation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="City"/>
+        <Class IRI="GeographicLocation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CommunityActivity"/>
+        <Class IRI="PETactivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ComputerScience"/>
+        <Class IRI="DomainOfknowledge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Course_group"/>
+        <Class IRI="PETgroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="History"/>
+        <Class IRI="DomainOfknowledge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Multidisciplinary_group"/>
+        <Class IRI="PETgroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ResearchActivity"/>
+        <Class IRI="PETactivity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Sociology"/>
+        <Class IRI="DomainOfknowledge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="State"/>
+        <Class IRI="GeographicLocation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TeachingActivity"/>
+        <Class IRI="PETactivity"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="Course_group"/>
+        <NamedIndividual IRI="PETECO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="University"/>
+        <NamedIndividual IRI="UTFPR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Campus"/>
+        <NamedIndividual IRI="campusCuritiba"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isLocatedIn"/>
+        <NamedIndividual IRI="PETECO"/>
+        <NamedIndividual IRI="campusCuritiba"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasCampus"/>
+        <NamedIndividual IRI="UTFPR"/>
+        <NamedIndividual IRI="campusCuritiba"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasCampus"/>
+        <ObjectProperty IRI="isCampusOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasDomain"/>
+        <ObjectProperty IRI="isDomainOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasPETgroup"/>
+        <ObjectProperty IRI="isPETgroupOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasParticipatingGroup"/>
+        <ObjectProperty IRI="isParticipantOf"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="isCampusOf"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasCampus"/>
+        <Class IRI="University"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasDomain"/>
+        <Class IRI="PETactivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPETgroup"/>
+        <Class IRI="University"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasParticipatingGroup"/>
+        <Class IRI="PETactivity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isCampusOf"/>
+        <Class IRI="Campus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isDomainOf"/>
+        <Class IRI="DomainOfknowledge"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isPETgroupOf"/>
+        <Class IRI="PETgroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isParticipantOf"/>
+        <Class IRI="PETgroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasCampus"/>
+        <Class IRI="Campus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDomain"/>
+        <Class IRI="DomainOfknowledge"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPETgroup"/>
+        <Class IRI="PETgroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasParticipatingGroup"/>
+        <Class IRI="PETgroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isCampusOf"/>
+        <Class IRI="University"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isDomainOf"/>
+        <Class IRI="PETactivity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isLocatedIn"/>
+        <Class IRI="GeographicLocation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isPETgroupOf"/>
+        <Class IRI="University"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isParticipantOf"/>
+        <Class IRI="PETactivity"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasEndDate"/>
+        <Class IRI="PETactivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasStartDate"/>
+        <Class IRI="PETactivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasTitle"/>
+        <Class IRI="PETactivity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasURI"/>
+        <Class IRI="PETactivity"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="hasEndDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasStartDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasURI"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>owl:topObjectProperty</AbbreviatedIRI>
+        <Literal xml:lang="en">Please provide the explanatory comments about the properties always in a one-to-one manner to make interpretation easier.
+
+Of course, if the property has no cardinality restrictions, we can instantiate it multiple times. For example, hasCampus refers to “a university has a campus.” Logically, it can be instantiated zero to many times:
+
+UTFPR hasCampus Curitiba
+UTFPR hasCampus Cornélio Procópio
+UTFPR hasCampus Dois Vizinhos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>owl:topObjectProperty</AbbreviatedIRI>
+        <Literal xml:lang="pt-br">Por favor, forneça os comentários explicativos sobre as propriedades sempre de maneira um-para-um para facilitar a interpretação.
+
+Logicamente, se a propriedade não tiver restrições de cardinalidade, podemos instanciá-la várias vezes. Por exemplo, hasCampus refere-se a “uma universidade tem um campus”.  Esta propriedade pode ser instanciada de zero a muitas vezes:
+
+UTFPR hasCampus Curitiba
+UTFPR hasCampus Cornélio Procópio
+UTFPR hasCampus Dois Vizinhos
+...</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Astronomy</IRI>
+        <Literal>Astronomia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Astronomy</IRI>
+        <Literal xml:lang="pt-br">Astronomia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Astronomy</IRI>
+        <Literal xml:lang="fr">Astronomie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Astronomy</IRI>
+        <Literal xml:lang="en">Astronomy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Campus</IRI>
+        <Literal xml:lang="en">A university campus is considered a location, typically identified by a name that often matches the name of the city in which it is situated. It is not a general rule, for instance, the UFPR has several campus at Curitiba: Histórico, Juvevê, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Campus</IRI>
+        <Literal xml:lang="en">Campus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Campus</IRI>
+        <Literal xml:lang="fr">Campus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Campus</IRI>
+        <Literal xml:lang="pt-br">Campus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>City</IRI>
+        <Literal xml:lang="pt-br">Cidade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>City</IRI>
+        <Literal xml:lang="en">City</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>City</IRI>
+        <Literal xml:lang="fr">Ville</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CommunityActivity</IRI>
+        <Literal xml:lang="fr">Activité communautaire</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CommunityActivity</IRI>
+        <Literal xml:lang="pt-br">Atividade de extensão</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CommunityActivity</IRI>
+        <Literal xml:lang="en">Community activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ComputerScience</IRI>
+        <Literal xml:lang="pt-br">Ciência da Computação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ComputerScience</IRI>
+        <Literal xml:lang="en">Computer science</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ComputerScience</IRI>
+        <Literal xml:lang="fr">Informatique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Course_group</IRI>
+        <Literal xml:lang="en">Course group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Course_group</IRI>
+        <Literal xml:lang="fr">Groupe de cursus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Course_group</IRI>
+        <Literal xml:lang="pt-br">Grupo de curso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DomainOfknowledge</IRI>
+        <Literal xml:lang="en">It is used to classify a PET activity under specific fields of knowledge. For example, a short course can cover topics in computer science and psychology.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DomainOfknowledge</IRI>
+        <Literal xml:lang="en">Domain of knowledge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DomainOfknowledge</IRI>
+        <Literal xml:lang="fr">Domaine de connaissance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DomainOfknowledge</IRI>
+        <Literal xml:lang="pt-br">Área de conhecimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>GeographicLocation</IRI>
+        <Literal xml:lang="en">It is used to define the state (e.g. Paraná) and city (e.g. Curitiba) of a PET group.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GeographicLocation</IRI>
+        <Literal xml:lang="en">Geographic location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GeographicLocation</IRI>
+        <Literal xml:lang="fr">Localité geographique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GeographicLocation</IRI>
+        <Literal xml:lang="pt-br">Localização geográfica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>History</IRI>
+        <Literal xml:lang="en">History</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>History</IRI>
+        <Literal xml:lang="pt-br">História</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Multidisciplinary_group</IRI>
+        <Literal xml:lang="fr">Groupe multidisciplinaire</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Multidisciplinary_group</IRI>
+        <Literal xml:lang="pt-br">Grupo conexão de saberes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Multidisciplinary_group</IRI>
+        <Literal xml:lang="en">Multidisciplinary group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PETactivity</IRI>
+        <Literal xml:lang="fr">Activité PET</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PETactivity</IRI>
+        <Literal xml:lang="pt-br">Atividade PET</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PETactivity</IRI>
+        <Literal xml:lang="en">PET activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PETgroup</IRI>
+        <Literal xml:lang="fr">Groupe PET</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PETgroup</IRI>
+        <Literal xml:lang="pt-br">Grupo PET</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PETgroup</IRI>
+        <Literal xml:lang="en">PET group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ResearchActivity</IRI>
+        <Literal xml:lang="fr">Activité de recherche</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ResearchActivity</IRI>
+        <Literal xml:lang="pt-br">Atividade de pesquisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ResearchActivity</IRI>
+        <Literal xml:lang="en">Research activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Sociology</IRI>
+        <Literal xml:lang="pt-br">Sociologia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Sociology</IRI>
+        <Literal xml:lang="en">Sociology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>State</IRI>
+        <Literal xml:lang="pt-br">Estado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>State</IRI>
+        <Literal xml:lang="en">State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>State</IRI>
+        <Literal xml:lang="fr">État</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TeachingActivity</IRI>
+        <Literal xml:lang="fr">Activité d&apos;enseignement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TeachingActivity</IRI>
+        <Literal xml:lang="pt-br">Atividade de ensino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TeachingActivity</IRI>
+        <Literal xml:lang="en">Teaching activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>University</IRI>
+        <Literal xml:lang="en">The university where the PET group is located at.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>University</IRI>
+        <Literal xml:lang="pt-br">Universidade do grupo PET</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>University</IRI>
+        <Literal xml:lang="pt-br">Universidade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>University</IRI>
+        <Literal xml:lang="en">University</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>University</IRI>
+        <Literal xml:lang="fr">Université</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasCampus</IRI>
+        <Literal xml:lang="en">A university has some campus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasCampus</IRI>
+        <Literal xml:lang="pt-br">Uma universidade tem vários campus.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasCampus</IRI>
+        <Literal xml:lang="pt-br">tem_campus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasDescription</IRI>
+        <Literal xml:lang="en">Use with everything that has a description, like a PET group that may be described by the most known activivities or some other features. This is a general relation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasDomain</IRI>
+        <Literal xml:lang="en">A PET activity covers a specific domain of knowledge.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasDomain</IRI>
+        <Literal xml:lang="pt-br">Uma atividade PET abrange uma área de conhecimento específica.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPETgroup</IRI>
+        <Literal xml:lang="en">A university has a pet group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPETgroup</IRI>
+        <Literal xml:lang="pt-br">Uma universidade tem um grupo PET.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasParticipatingGroup</IRI>
+        <Literal xml:lang="en">An activity can be associated with one or more PET groups.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasParticipatingGroup</IRI>
+        <Literal xml:lang="pt-br">Uma atividade pode estar vinculada a um ou mais grupos PET</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTitle</IRI>
+        <Literal xml:lang="en">A PET activity has a title.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTitle</IRI>
+        <Literal xml:lang="pt-br">Uma atividade PET possui um título.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isCampusOf</IRI>
+        <Literal xml:lang="en">A campus belongs to an University</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isCampusOf</IRI>
+        <Literal xml:lang="pt-br">Um campus pertence a uma universidade.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isDomainOf</IRI>
+        <Literal xml:lang="en">A domain of knowledge is covered by a PET activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isDomainOf</IRI>
+        <Literal xml:lang="pt-br">Uma área de conhecimento é abordada por uma atividade PET.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isLocatedIn</IRI>
+        <Literal xml:lang="en">This is a general relation between a campus and the city it is located or between a city and its state. It can be used to every relation that aims to represent the fact that something is located at some place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isPETgroupOf</IRI>
+        <Literal xml:lang="en">A PET group belongs to or is part of an university.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isPETgroupOf</IRI>
+        <Literal xml:lang="pt-br">Um grupo PET pertence a uma universidade.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isParticipantOf</IRI>
+        <Literal xml:lang="en">A PET Group can be associated with one or more activities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isParticipantOf</IRI>
+        <Literal xml:lang="pt-br">Um grupo PET pode estar associado a uma ou mais atividades.</Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty abbreviatedIRI="owl:backwardCompatibleWith"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

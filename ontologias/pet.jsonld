@@ -1,0 +1,543 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETgroup"
+    }, {
+      "@id" : "_:genid3"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/campusCuritiba"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/isLocatedIn"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#backwardCompatibleWith",
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Please provide the explanatory comments about the properties always in a one-to-one manner to make interpretation easier.\n\nOf course, if the property has no cardinality restrictions, we can instantiate it multiple times. For example, hasCampus refers to “a university has a campus.” Logically, it can be instantiated zero to many times:\n\nUTFPR hasCampus Curitiba\nUTFPR hasCampus Cornélio Procópio\nUTFPR hasCampus Dois Vizinhos"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Por favor, forneça os comentários explicativos sobre as propriedades sempre de maneira um-para-um para facilitar a interpretação.\n\nLogicamente, se a propriedade não tiver restrições de cardinalidade, podemos instanciá-la várias vezes. Por exemplo, hasCampus refere-se a “uma universidade tem um campus”.  Esta propriedade pode ser instanciada de zero a muitas vezes:\n\nUTFPR hasCampus Curitiba\nUTFPR hasCampus Cornélio Procópio\nUTFPR hasCampus Dois Vizinhos\n..."
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/1.0.0"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/Astronomy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Astronomia"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Astronomia"
+  }, {
+    "@language" : "fr",
+    "@value" : "Astronomie"
+  }, {
+    "@language" : "en",
+    "@value" : "Astronomy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/Campus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A university campus is considered a location, typically identified by a name that often matches the name of the city in which it is situated. It is not a general rule, for instance, the UFPR has several campus at Curitiba: Histórico, Juvevê, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Campus"
+  }, {
+    "@language" : "fr",
+    "@value" : "Campus"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Campus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/GeographicLocation"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/City",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt-br",
+    "@value" : "Cidade"
+  }, {
+    "@language" : "en",
+    "@value" : "City"
+  }, {
+    "@language" : "fr",
+    "@value" : "Ville"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/GeographicLocation"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/CommunityActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Activité communautaire"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Atividade de extensão"
+  }, {
+    "@language" : "en",
+    "@value" : "Community activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/ComputerScience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt-br",
+    "@value" : "Ciência da Computação"
+  }, {
+    "@language" : "en",
+    "@value" : "Computer science"
+  }, {
+    "@language" : "fr",
+    "@value" : "Informatique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/Course_group",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Course group"
+  }, {
+    "@language" : "fr",
+    "@value" : "Groupe de cursus"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Grupo de curso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETgroup"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "It is used to classify a PET activity under specific fields of knowledge. For example, a short course can cover topics in computer science and psychology."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Domain of knowledge"
+  }, {
+    "@value" : "Domaine de connaissance"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Área de conhecimento"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/GeographicLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "It is used to define the state (e.g. Paraná) and city (e.g. Curitiba) of a PET group."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Geographic location"
+  }, {
+    "@language" : "fr",
+    "@value" : "Localité geographique"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Localização geográfica"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/History",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "History"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "História"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/Multidisciplinary_group",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Groupe multidisciplinaire"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Grupo conexão de saberes"
+  }, {
+    "@language" : "en",
+    "@value" : "Multidisciplinary group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETgroup"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETECO",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/Course_group"
+  } ],
+  "https://github.com/peteco-utfpr/grupos-pet/isLocatedIn" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/campusCuritiba"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETGroupInCampusCuritibaUTFRP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Activité PET"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Atividade PET"
+  }, {
+    "@language" : "en",
+    "@value" : "PET activity"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETgroup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Groupe PET"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Grupo PET"
+  }, {
+    "@language" : "en",
+    "@value" : "PET group"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/ResearchActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Activité de recherche"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Atividade de pesquisa"
+  }, {
+    "@language" : "en",
+    "@value" : "Research activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/Sociology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt-br",
+    "@value" : "Sociologia"
+  }, {
+    "@language" : "en",
+    "@value" : "Sociology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/State",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt-br",
+    "@value" : "Estado"
+  }, {
+    "@language" : "en",
+    "@value" : "State"
+  }, {
+    "@language" : "fr",
+    "@value" : "État"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/GeographicLocation"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/TeachingActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Activité d'enseignement"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Atividade de ensino"
+  }, {
+    "@language" : "en",
+    "@value" : "Teaching activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/UTFPR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/University"
+  } ],
+  "https://github.com/peteco-utfpr/grupos-pet/hasCampus" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/campusCuritiba"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/University",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The university where the PET group is located at."
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Universidade do grupo PET"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt-br",
+    "@value" : "Universidade"
+  }, {
+    "@language" : "en",
+    "@value" : "University"
+  }, {
+    "@language" : "fr",
+    "@value" : "Université"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/campusCuritiba",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/Campus"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/hasCampus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A university has some campus"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Uma universidade tem vários campus."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/University"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt-br",
+    "@value" : "tem_campus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/Campus"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/isCampusOf"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/hasDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Use with everything that has a description, like a PET group that may be described by the most known activivities or some other features. This is a general relation."
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/hasDomain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A PET activity covers a specific domain of knowledge."
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Uma atividade PET abrange uma área de conhecimento específica."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/isDomainOf"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/hasEndDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/hasName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A general property used to specify the official or commonly used name of an entity, such as a PET group, a university, a campus, or a geographic location."
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/hasPETgroup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A university has a pet group"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Uma universidade tem um grupo PET."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/University"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETgroup"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/isPETgroupOf"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/hasParticipatingGroup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An activity can be associated with one or more PET groups."
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Uma atividade pode estar vinculada a um ou mais grupos PET"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETgroup"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/isParticipantOf"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/hasStartDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/hasTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A PET activity has a title."
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Uma atividade PET possui um título."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/isCampusOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A campus belongs to an University"
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Um campus pertence a uma universidade."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/Campus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/University"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/isDomainOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A domain of knowledge is covered by a PET activity."
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Uma área de conhecimento é abordada por uma atividade PET."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/DomainOfknowledge"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/isLocatedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is a general relation between a campus and the city it is located or between a city and its state. It can be used to every relation that aims to represent the fact that something is located at some place."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/GeographicLocation"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/isPETgroupOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A PET group belongs to or is part of an university."
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Um grupo PET pertence a uma universidade."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETgroup"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/University"
+  } ]
+}, {
+  "@id" : "https://github.com/peteco-utfpr/grupos-pet/isParticipantOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A PET Group can be associated with one or more activities."
+  }, {
+    "@language" : "pt-br",
+    "@value" : "Um grupo PET pode estar associado a uma ou mais atividades."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETgroup"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://github.com/peteco-utfpr/grupos-pet/PETactivity"
+  } ]
+} ]

@@ -1,0 +1,736 @@
+{
+  "baseIRI": "https://github.com/peteco-utfpr/grupos-pet/",
+  "namespaces": {
+    "pet": "https://github.com/peteco-utfpr/grupos-pet/"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasName"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "nome_grupo",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "isPETgroupOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "pet",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "universidade",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "isParticipantOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "cells[\"titulo_atividade\"].value.replace(\" \", \"_\").replace(\"/\", \"_\")",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "pet",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "nome_grupo",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "PETgroup"
+          }
+        },
+        {
+          "transformation": {
+            "expression": "if(cells[\"tipo_grupo\"].value == \"Curso\", \"Course_group\", \"Multidisciplinary_group\")",
+            "language": "grel"
+          },
+          "valueSource": {
+            "source": "row_index"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasName"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "universidade",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasCampus"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "pet",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "campos",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasPETgroup"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "pet",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "nome_grupo",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "pet",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "universidade",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "University"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasName"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "campos",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "isLocatedIn"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "pet",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "cidade",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "isCampusOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "pet",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "universidade",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "pet",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "campos",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "GeographicLocation"
+          }
+        },
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "Campus"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasName"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "cidade",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "pet",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "cidade",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "GeographicLocation"
+          }
+        },
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "City"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasName"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "estado",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "pet",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "estado",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "GeographicLocation"
+          }
+        },
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "State"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasTitle"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "titulo_atividade",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasStartDate"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "data_inicio",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasEndDate"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "data_fim",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasParticipatingGroup"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "pet",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "nome_grupo",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasDomain"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "pet",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "area",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasURI"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "uri",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasDescription"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "descricao",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "cells[\"titulo_atividade\"].value.replace(\" \", \"_\").replace(\"/\", \"_\")",
+          "language": "grel"
+        },
+        "valueSource": {
+          "source": "row_index"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "PETactivity"
+          }
+        },
+        {
+          "transformation": {
+            "expression": "if(cells[\"tipo_atividade\"].value == \"Ensino\", \"TeachingActivity\", if(cells[\"tipo_atividade\"].value == \"Pesquisa\", \"ResearchActivity\", \"CommunityActivity\"))",
+            "language": "grel"
+          },
+          "valueSource": {
+            "source": "row_index"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "pet",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "isDomainOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "cells[\"titulo_atividade\"].value.replace(\" \", \"_\").replace(\"/\", \"_\")",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "pet",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "area",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "DomainOfKnowledge"
+          }
+        },
+        {
+          "transformation": {
+            "expression": "pet",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "columnName": "area",
+            "source": "column"
+          }
+        }
+      ]
+    }
+  ]
+}
