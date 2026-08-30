@@ -6,7 +6,7 @@ import re
 URI_NEO4J = "neo4j://127.0.0.1:7687"
 USER_NEO4J = "neo4j"
 PASS_NEO4J = "eduardo1989"  
-FICHEIRO_TTL = "registros.ttl" 
+FICHEIRO_TTL = "api/registros.ttl" 
 
 PREFIXO_BASE = "https://github.com/peteco-utfpr/grupos-pet/"
 

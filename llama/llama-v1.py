@@ -9,7 +9,7 @@ import os
 # 1. EXTRAÇÃO DA URL 
 # ==========================================
 
-url = "https://utfpr.curitiba.br/peteco/2011/03/28/curso-latex/"
+url = "https://utfpr.curitiba.br/peteco/2013/11/22/mini-curso-de-arduino/"
 
 print(f"1. Acessando a página: {url}...")
 resposta = requests.get(url)
@@ -86,7 +86,7 @@ resposta_ia = ollama.chat(
 # 3. SALVANDO NA PLANILHA
 # ==========================================
 
-nome_arquivo_csv = "planilha_tcc_pet.csv"
+nome_arquivo_csv = "planilhas_pet/planilha_tcc_pet.csv"
 colunas = [
     "nome_grupo", "tipo_grupo", "universidade", "estado", "cidade", 
     "campos", "titulo_atividade", "tipo_atividade", "area", 
@@ -106,13 +106,13 @@ try:
     arquivo_existe = os.path.isfile(nome_arquivo_csv)
     
     # Abre o arquivo para adicionar a nova linha (mode='a' é Append)
-    with open(nome_arquivo_csv, mode='a', newline='', encoding='utf-8') as arquivo:
+    with open(nome_arquivo_csv, mode='w', newline='', encoding='utf-8') as arquivo:
         # Usamos ponto e vírgula (;) porque o Excel em português lê isso direto como coluna separada
         writer = csv.DictWriter(arquivo, fieldnames=colunas, delimiter=';')
         
         # Se for um arquivo novo, cria o cabeçalho primeiro
-        if not arquivo_existe:
-            writer.writeheader()
+        
+        writer.writeheader()
             
         writer.writerow(dados)
         
