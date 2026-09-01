@@ -1,0 +1,11 @@
+services:
+  refine:
+    image: ontotext/refine
+    restart: unless-stopped
+    ports:
+      - "7333:7333"
+    volumes:
+      - refine_data:/opt/ontorefine/data
+
+volumes:
+  refine_data:
