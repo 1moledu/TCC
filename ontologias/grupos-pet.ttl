@@ -3,7 +3,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://github.com/peteco-utfpr/grupos-pet/> .
 
@@ -21,6 +20,11 @@ owl:backwardCompatibleWith rdfs:range xsd:string .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://webprotege.stanford.edu/R83aduYymqV69MOVW32kfc
+<http://webprotege.stanford.edu/R83aduYymqV69MOVW32kfc> rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "hasLink" .
+
 
 ###  https://github.com/peteco-utfpr/grupos-pet/hasCampus
 :hasCampus rdf:type owl:ObjectProperty ;
@@ -102,6 +106,21 @@ owl:backwardCompatibleWith rdfs:range xsd:string .
 #    Data properties
 #################################################################
 
+###  http://webprotege.stanford.edu/R9WOQFMALIkCbr2tAcwPuW
+<http://webprotege.stanford.edu/R9WOQFMALIkCbr2tAcwPuW> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:comment "Propriedade geral de Nome para ser usada na Ontologia."^^xsd:string ;
+                                                        rdfs:label "hasName" .
+
+
+###  http://webprotege.stanford.edu/RhyENRrBeDprPkZX1rmQoM
+<http://webprotege.stanford.edu/RhyENRrBeDprPkZX1rmQoM> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                        rdfs:range xsd:anyURI ;
+                                                        rdfs:label "hasLink"@en .
+
+
 ###  https://github.com/peteco-utfpr/grupos-pet/hasDescription
 :hasDescription rdf:type owl:DatatypeProperty ;
                 rdfs:comment "Use with everything that has a description, like a PET group that may be described by the most known activivities or some other features. This is a general relation."@en .
@@ -130,6 +149,13 @@ owl:backwardCompatibleWith rdfs:range xsd:string .
 #################################################################
 #    Classes
 #################################################################
+
+###  http://webprotege.stanford.edu/R8BrH3Biyo0MQ3eUO9io3Xg
+<http://webprotege.stanford.edu/R8BrH3Biyo0MQ3eUO9io3Xg> rdf:type owl:Class ;
+                                                         rdfs:subClassOf :DomainOfknowledge ;
+                                                         rdfs:label "Filosofia"@pt-br ,
+                                                                    "Philosophy"^^xsd:string .
+
 
 ###  https://github.com/peteco-utfpr/grupos-pet/Astronomy
 :Astronomy rdf:type owl:Class ;
@@ -212,18 +238,6 @@ owl:backwardCompatibleWith rdfs:range xsd:string .
                                     "Multidisciplinary group"@en .
 
 
-###  https://github.com/peteco-utfpr/grupos-pet/PETGroupInCampusCuritibaUTFRP
-:PETGroupInCampusCuritibaUTFRP rdf:type owl:Class ;
-                               owl:equivalentClass [ owl:intersectionOf ( :PETgroup
-                                                                          [ rdf:type owl:Restriction ;
-                                                                            owl:onProperty :isLocatedIn ;
-                                                                            owl:hasValue :campusCuritiba
-                                                                          ]
-                                                                        ) ;
-                                                     rdf:type owl:Class
-                                                   ] .
-
-
 ###  https://github.com/peteco-utfpr/grupos-pet/PETactivity
 :PETactivity rdf:type owl:Class ;
              rdfs:label "Activité PET"@fr ,
@@ -279,45 +293,24 @@ owl:backwardCompatibleWith rdfs:range xsd:string .
 
 
 #################################################################
-#    Individuals
-#################################################################
-
-###  https://github.com/peteco-utfpr/grupos-pet/PETECO
-:PETECO rdf:type owl:NamedIndividual ,
-                 :Course_group ;
-        :isLocatedIn :campusCuritiba .
-
-
-###  https://github.com/peteco-utfpr/grupos-pet/UTFPR
-:UTFPR rdf:type owl:NamedIndividual ,
-                :University ;
-       :hasCampus :campusCuritiba .
-
-
-###  https://github.com/peteco-utfpr/grupos-pet/campusCuritiba
-:campusCuritiba rdf:type owl:NamedIndividual ,
-                         :Campus .
-
-
-#################################################################
 #    Annotations
 #################################################################
 
-owl:topObjectProperty rdfs:comment """Please provide the explanatory comments about the properties always in a one-to-one manner to make interpretation easier.
-
-Of course, if the property has no cardinality restrictions, we can instantiate it multiple times. For example, hasCampus refers to “a university has a campus.” Logically, it can be instantiated zero to many times:
-
-UTFPR hasCampus Curitiba
-UTFPR hasCampus Cornélio Procópio
-UTFPR hasCampus Dois Vizinhos"""@en ,
-                                   """Por favor, forneça os comentários explicativos sobre as propriedades sempre de maneira um-para-um para facilitar a interpretação.
+owl:topObjectProperty rdfs:comment """Por favor, forneça os comentários explicativos sobre as propriedades sempre de maneira um-para-um para facilitar a interpretação.
 
 Logicamente, se a propriedade não tiver restrições de cardinalidade, podemos instanciá-la várias vezes. Por exemplo, hasCampus refere-se a “uma universidade tem um campus”.  Esta propriedade pode ser instanciada de zero a muitas vezes:
 
 UTFPR hasCampus Curitiba
 UTFPR hasCampus Cornélio Procópio
 UTFPR hasCampus Dois Vizinhos
-..."""@pt-br .
+..."""@pt-br ,
+                                   """Please provide the explanatory comments about the properties always in a one-to-one manner to make interpretation easier.
+
+Of course, if the property has no cardinality restrictions, we can instantiate it multiple times. For example, hasCampus refers to “a university has a campus.” Logically, it can be instantiated zero to many times:
+
+UTFPR hasCampus Curitiba
+UTFPR hasCampus Cornélio Procópio
+UTFPR hasCampus Dois Vizinhos"""@en .
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi

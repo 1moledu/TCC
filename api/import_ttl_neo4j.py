@@ -6,7 +6,7 @@ import re
 URI_NEO4J = "neo4j://127.0.0.1:7687"
 USER_NEO4J = "neo4j"
 PASS_NEO4J = "eduardo1989"  
-FICHEIRO_TTL = "api/registros.ttl" 
+#FICHEIRO_TTL = "api/registros.ttl" 
 
 PREFIXO_BASE = "https://github.com/peteco-utfpr/grupos-pet/"
 
@@ -17,9 +17,9 @@ def extrair_nome(uri):
     from urllib.parse import unquote
     return unquote(nome)
 
-def importar_para_neo4j():
+def importar_para_neo4j(caminho_ttl):
     g = rdflib.Graph()
-    g.parse(FICHEIRO_TTL, format="turtle")
+    g.parse(caminho_ttl, format="turtle")
     
     driver = GraphDatabase.driver(URI_NEO4J, auth=(USER_NEO4J, PASS_NEO4J))
 
