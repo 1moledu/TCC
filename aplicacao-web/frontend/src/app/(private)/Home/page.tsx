@@ -19,12 +19,6 @@ const ink = '#12182B';
 const accent = 'rgb(254, 190, 0)';
 const paper = '#FAFAF9';
 
-const stats = [
-  { label: 'Grupos PET mapeados', value: '~900' },
-  { label: 'Regiões do Brasil cobertas', value: '5' },
-  { label: 'Fontes de dados integradas', value: 'Web + redes sociais' },
-];
-
 const steps = [
   {
     icon: <TravelExploreIcon sx={{ fontSize: 28 }} />,
@@ -143,24 +137,6 @@ export default function HomePage() {
             </Button>
           </Box>
         </Box>
-      </Box>
-
-      {/* Estatísticas */}
-      <Box sx={{ px: { xs: 3, md: 8 }, pb: { xs: 6, md: 8 } }}>
-        <Grid container spacing={2}>
-          {stats.map((stat) => (
-            <Grid size={{ xs: 12, sm: 4 }} key={stat.label}>
-              <Box sx={{ bgcolor: '#fff', border: '1px solid rgba(18,24,43,0.08)', borderRadius: 1, p: 3 }}>
-                <Typography sx={{ fontFamily: 'var(--font-display)', fontSize: 26, color: ink }}>
-                  {stat.value}
-                </Typography>
-                <Typography sx={{ color: '#6B7280', fontSize: 14, mt: 0.5 }}>
-                  {stat.label}
-                </Typography>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
       </Box>
 
       {/* Como funciona */}

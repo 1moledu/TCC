@@ -668,6 +668,11 @@ UTFPR hasCampus Dois Vizinhos
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasURI</IRI>
+        <Literal xml:lang="pt-br">Uma atividade PET pode ter um link de acesso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>isCampusOf</IRI>
         <Literal xml:lang="en">A campus belongs to an University</Literal>
     </AnnotationAssertion>
